@@ -50,10 +50,11 @@ async def main():
 username = "YOUR EMAIL"
 password = "YOUR PASSWORD"
 slack_webhook = "SLACK WEB HOOK"
+addressID = "12345"  # Your address ID - get it from the browser's debug console
 
 # API paths
 login = "https://api.shipt.com/auth/v2/oauth/token?white_label_key=shipt"
-delivery_time_path = "https://app.shipt.com/api/v1/orders/available_slots.json?customer_address_id=7673640"
+delivery_time_path = "https://app.shipt.com/api/v1/orders/available_slots.json?customer_address_id={}".format(addressID)
 
 # HTML headers
 login_data = {
